@@ -1,0 +1,31 @@
+================================================================================
+RELATÓRIO DESCRITIVO - TRABALHO PRÁTICO DE PYTHON
+================================================================================
+
+1. INTRODUÇÃO
+A empresa modelada para este trabalho chama-se "TechNexus", uma loja especializada 
+no comércio de hardware e componentes eletrônicos. 
+O sistema atende a dois tipos de usuários:
+- Gerente: Possui acesso total ao sistema (CRUD completo de usuários e produtos).
+- Funcionário: Possui acesso limitado (pode apenas listar produtos de formas 
+  diferentes e buscar itens específicos no estoque, sem permissão para alterar dados).
+
+2. IMPLEMENTAÇÃO
+- Estrutura de Dados dos Usuários: Armazenados em uma lista de dicionários em memória.
+  Cada usuário possui os atributos: 'username', 'password' e 'permissao' (gerente/funcionario).
+- Estrutura de Dados dos Produtos: Armazenados em uma lista de dicionários.
+  Cada produto possui: 'codigo', 'nome', 'preco' (float) e 'quantidade' (int).
+- Persistência de Dados: Ambos os cadastros são salvos em arquivos de texto (.txt), 
+  onde cada linha representa um registro com os campos separados por vírgulas (,).
+- CRUD e Ordenação: O CRUD de produtos e usuários foi implementado via menus interativos.
+  A ordenação exigida foi feita utilizando a função nativa `sorted()` do Python com 
+  expressões lambda para definir a chave de ordenação (por nome ou por preço).
+
+3. CONCLUSÃO
+O maior desafio do projeto foi realizar a validação correta dos dados lidos dos arquivos,
+garantindo que tipos numéricos (como preço e quantidade) fossem convertidos corretamente 
+sem quebrar o programa. A separação do sistema por níveis de permissão permitiu 
+compreender bem a aplicação prática de estruturas condicionais no controle de fluxo. 
+Como melhoria futura, o uso de um banco de dados SQLite ou interface gráfica tornaria 
+o sistema mais profissional.
+================================================================================
